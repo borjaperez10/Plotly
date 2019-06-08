@@ -1,0 +1,33 @@
+
+
+---
+title: "Developing data products- Plotly"
+author: "Borja Perez"
+date: "08 of June, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(knitr.table.format = "html") 
+```
+
+
+```{r, echo=FALSE}
+library(plotly)
+data(iris)
+```
+
+
+```{r , eval=FALSE}
+plot_ly(iris, x = iris$Petal.Length, y = iris$Petal.Width, mode = "markers", color = as.factor(iris$Species), type = "scatter")
+```
+
+
+Plotting Petal Length and Width based on Species
+----
+```{r , echo=FALSE}
+
+plot_ly(iris, x = iris$Petal.Length, y = iris$Petal.Width, mode = "markers", color = as.factor(iris$Species), type = "scatter")
+
+```
